@@ -23,3 +23,5 @@ vim.api.nvim_set_keymap(
   { silent = true }
 )
 vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.api.nvim_set_keymap("n", "<tab>", "<S-l>", { desc = "Go to next tab", silent = true, noremap = true })
