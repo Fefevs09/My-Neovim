@@ -1,3 +1,4 @@
+local configs = require("setup.editor")
 return {
   -- git config
   {
@@ -10,6 +11,14 @@ return {
         -- Open file/folder in git repository
         browse = "<Leader>go",
       },
+    },
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    config = configs.nvimtree,
+    -- opts = configs.nvimtree,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons", -- optional, for file icon
     },
   },
 }
