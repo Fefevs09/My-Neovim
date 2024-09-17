@@ -1,5 +1,6 @@
 return {
   "epwalsh/obsidian.nvim",
+  enabled = true,
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = true,
   ft = "markdown",
@@ -21,8 +22,13 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/Documents/Felipe_s Docs",
+        -- path = "~/Documents/FelipeDocs/src/Annotations/",
+        path = "/Users/vieira/Documents/FelipeDocs/src/Annotations/",
       },
+      -- {
+      --   name = "project",
+      --   path = "~/Documents/FelipeDocs/src/Projects/",
+      -- },
       -- {
       --   name = "work",
       --   path = "~/vaults/work",

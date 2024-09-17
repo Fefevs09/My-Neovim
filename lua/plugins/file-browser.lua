@@ -15,6 +15,7 @@ return {
               ["<C-w>"] = function()
                 vim.cmd("normal vbd")
               end,
+              ["<Esc>"] = require("telescope.actions").close,
             },
             ["n"] = {
               ["n"] = fb_actions.create,
@@ -24,6 +25,7 @@ return {
               end,
             },
           },
+          initial_mode = "insert",
         },
       },
     })

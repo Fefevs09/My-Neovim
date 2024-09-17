@@ -6,6 +6,14 @@ return {
     {
       "akinsho/toggleterm.nvim",
       version = "*",
+      opts = {
+        winbar = {
+          enable = true,
+          name_formatter = function(term) --  term: Terminal
+            return term.name
+          end,
+        },
+      },
       config = function()
         require("toggleterm").setup({
           size = 20,
@@ -17,7 +25,7 @@ return {
           start_in_insert = true,
           insert_mappings = true,
           persist_size = true,
-          direction = "float",
+          direction = "horizontal",
           close_on_exit = true,
           shell = vim.o.shell,
           dir = vim.fn.getcwd(),

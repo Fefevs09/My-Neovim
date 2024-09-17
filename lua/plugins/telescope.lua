@@ -1,3 +1,4 @@
+local theme = "ivy"
 return {
   {
     "nvim-telescope/telescope.nvim",
@@ -128,6 +129,7 @@ return {
 
       return {
         defaults = {
+          theme = "ivy", -- Set the default theme to ivy
           prompt_prefix = " ",
           selection_caret = " ",
           -- open files in the first window that is an actual file.
@@ -160,9 +162,49 @@ return {
           },
         },
         pickers = {
+          buffers = {
+            theme = theme,
+          },
           find_files = {
-            find_command = find_command,
+            theme = theme,
+            hidden = false,
+          },
+          oldfiles = {
+            theme = theme,
             hidden = true,
+          },
+          live_grep = {
+            debounce = 100,
+            theme = theme,
+            on_input_filter_cb = function(prompt)
+              -- AND operator for live_grep like how fzf handles spaces with wildcards in rg
+              return { prompt = prompt:gsub("%s", ".*") }
+            end,
+          },
+          current_buffer_fuzzy_find = {
+            theme = theme,
+          },
+          commands = {
+            theme = theme,
+          },
+          lsp_document_symbols = {
+            theme = theme,
+          },
+          diagnostics = {
+            theme = theme,
+            initial_mode = "normal",
+          },
+          lsp_references = {
+            theme = "cursor",
+            initial_mode = "normal",
+            layout_config = {
+              width = 0.8,
+              height = 0.4,
+            },
+          },
+          lsp_code_actions = {
+            theme = "cursor",
+            initial_mode = "normal",
           },
         },
       }

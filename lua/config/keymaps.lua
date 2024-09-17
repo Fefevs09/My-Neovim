@@ -23,5 +23,28 @@ vim.api.nvim_set_keymap(
   { silent = true }
 )
 vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.api.nvim_set_keymap("n", "<tab>", "<S-l>", { desc = "Go to next tab", silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<space>;", "<CMD>Dashboard<CR>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- vim.api.nvim_set_keymap("n", "<tab>", "<S-l>", { desc = "Go to next tab", silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "|",
+  "<cmd>lua ToggleTheme()<CR>",
+  { noremap = true, silent = true, desc = "Toggle Theme" }
+)
+-- neogit keymaps
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>gs",
+  ':lua require("neogit").open()<CR>',
+  { silent = true, noremap = true, desc = "Open Neogit" }
+)
+
+function ToggleTheme()
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
+end
