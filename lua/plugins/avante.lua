@@ -2,7 +2,7 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   version = false,
-  -- enabled = false,
+  enabled = true,
   lazy = false,
   opts = {
     -- add any opts here
@@ -33,7 +33,7 @@ return {
         prev = "[x",
       },
       suggestion = {
-        accept = "<M-l>",
+        accept = "<C-y>",
         -- accept = "<tab>",
         next = "<M-]>",
         prev = "<M-[>",

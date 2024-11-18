@@ -24,9 +24,8 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<space>;", "<CMD>Dashboard<CR>", { noremap = true, silent = true })
--- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>o-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- vim.api.nvim_set_keymap("n", "<tab>", "<S-l>", { desc = "Go to next tab", silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
   "n",
   "|",
@@ -40,6 +39,11 @@ vim.api.nvim_set_keymap(
   ':lua require("neogit").open()<CR>',
   { silent = true, noremap = true, desc = "Open Neogit" }
 )
+
+vim.keymap.set("n", "<leader>gi", "<cmd>Telescope gh issues<cr>", { desc = "GitHub Issues" })
+vim.keymap.set("n", "<leader>gp", "<cmd>Telescope gh pull_request<cr>", { desc = "GitHub Pull Requests" })
+vim.keymap.set("n", "<leader>gg", "<cmd>Telescope gh gist<cr>", { desc = "GitHub Gists" })
+vim.keymap.set("n", "<leader>gr", "<cmd>Telescope gh run<cr>", { desc = "GitHub Actions" })
 
 function ToggleTheme()
   if vim.o.background == "dark" then

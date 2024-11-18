@@ -44,7 +44,7 @@ configs.nvimtree = function()
       },
     },
     filters = {
-      dotfiles = false,
+      dotfiles = true,
     },
     disable_netrw = true,
     hijack_netrw = true,

@@ -16,6 +16,7 @@ return {
                 vim.cmd("normal vbd")
               end,
               ["<Esc>"] = require("telescope.actions").close,
+              ["<Tab>"] = require("telescope.actions").select_default,
             },
             ["n"] = {
               ["n"] = fb_actions.create,

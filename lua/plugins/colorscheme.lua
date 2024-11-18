@@ -1,7 +1,17 @@
 return {
   {
+    "Mofiqul/vscode.nvim",
+    opts = {
+      transparent = false,
+      italic_comments = true,
+      underline_links = true,
+      disable_nvimtree_bg = true,
+    },
+  },
+  {
     "nyoom-engineering/oxocarbon.nvim",
   },
+  { "blazkowolf/gruber-darker.nvim" },
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
@@ -42,7 +52,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      ---@type "solarized-osaka" | "tokyonight" | "oxocarbon" | "onedark"
+      ---@type "solarized-osaka" | "tokyonight" | "oxocarbon" | "onedark" | "gruber-darker" | "vscode"
       colorscheme = "onedark",
     },
   },
