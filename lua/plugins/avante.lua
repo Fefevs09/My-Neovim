@@ -1,13 +1,15 @@
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
+  dir = "~/workspace/projects/avante.nvim/",
   version = false,
   enabled = true,
   lazy = false,
+  build = "make",
   opts = {
     -- add any opts here
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-    provider = "claude",
+    provider = "openai",
     claude = {
       endpoint = "https://api.anthropic.com",
       model = "claude-3-5-sonnet-20240620",

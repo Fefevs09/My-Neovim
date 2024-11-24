@@ -44,6 +44,8 @@ vim.keymap.set("n", "<leader>gi", "<cmd>Telescope gh issues<cr>", { desc = "GitH
 vim.keymap.set("n", "<leader>gp", "<cmd>Telescope gh pull_request<cr>", { desc = "GitHub Pull Requests" })
 vim.keymap.set("n", "<leader>gg", "<cmd>Telescope gh gist<cr>", { desc = "GitHub Gists" })
 vim.keymap.set("n", "<leader>gr", "<cmd>Telescope gh run<cr>", { desc = "GitHub Actions" })
+vim.keymap.set("n", "<leader>gr", "<cmd>Telescope gh run<cr>", { desc = "GitHub Actions" })
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "GitHub Actions" })
 
 function ToggleTheme()
   if vim.o.background == "dark" then
